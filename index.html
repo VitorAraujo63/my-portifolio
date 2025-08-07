@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-translate="page-title">Vitor H. | Desenvolvedor Front-end & Back-end</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="A.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">Vitor</div>
+            
+            <!-- Theme Toggle -->
+            <div class="theme-toggle" id="themeToggle">
+                <i class="fas fa-sun" id="sunIcon"></i>
+                <i class="fas fa-moon" id="moonIcon"></i>
+            </div>
+            
+            <!-- Language Selector -->
+            <div class="language-selector">
+                <div class="current-language" id="currentLanguage">
+                    <img src="https://flagcdn.com/w20/br.png" alt="PT-BR" class="flag-icon">
+                    <span>PT</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="language-dropdown" id="languageDropdown">
+                    <div class="language-option" data-lang="pt-BR">
+                        <img src="https://flagcdn.com/w20/br.png" alt="Português Brasil" class="flag-icon">
+                        <span>Português (BR)</span>
+                    </div>
+                    <div class="language-option" data-lang="en">
+                        <img src="https://flagcdn.com/w20/us.png" alt="English" class="flag-icon">
+                        <span>English</span>
+                    </div>
+                    <div class="language-option" data-lang="de">
+                        <img src="https://flagcdn.com/w20/de.png" alt="Deutsch" class="flag-icon">
+                        <span>Deutsch</span>
+                    </div>
+                    <div class="language-option" data-lang="fr">
+                        <img src="https://flagcdn.com/w20/fr.png" alt="Français" class="flag-icon">
+                        <span>Français</span>
+                    </div>
+                    <div class="language-option" data-lang="it">
+                        <img src="https://flagcdn.com/w20/it.png" alt="Italiano" class="flag-icon">
+                        <span>Italiano</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home" class="nav-link" data-translate="nav-home">Home</a></li>
+                <li><a href="#about" class="nav-link" data-translate="nav-about">About</a></li>
+                <li><a href="#services" class="nav-link" data-translate="nav-services">Services</a></li>
+                <li><a href="#experience" class="nav-link" data-translate="nav-experience">Experience</a></li>
+                <li><a href="#portfolio" class="nav-link" data-translate="nav-portfolio">Portfolio</a></li>
+                <li><a href="#contact" class="nav-link" data-translate="nav-contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <h1 class="hero-title">
+                <span class="highlight">Vitor Henrique</span>
+            </h1>
+            <h2 class="hero-subtitle" data-translate="hero-subtitle">Front-end & Back-end Developer</h2>
+            <div class="hero-buttons">
+                <a href="#portfolio" class="btn btn-primary" data-translate="hero-btn-work">View My Work</a>
+                <a href="#contact" class="btn btn-outline" data-translate="hero-btn-contact">Contact Me</a>
+            </div>
+            <div class="scroll-indicator">
+                <i class="fas fa-arrow-down"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about section-padding">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" data-translate="about-title">About Me</h2>
+                <div class="divider"></div>
+            </div>
+            <div class="about-content">
+                <div class="about-image">
+                    <div class="image-container">
+                        <img src="img/picture.jpg" alt="Profile Photo">
+                    </div>
+                </div>
+                <div class="about-text">
+                    <p data-translate="about-text-1">I am a back-end and front-end developer, and I continue trying to delve deeper and understand more and more concepts. I am studying Laravel (PHP framework) and Vue.Js to delve deeper and continue working with these technologies. I am also currently studying computer science at Unimar.</p>
+                    <p data-translate="about-text-2">When I'm not programming or studying, I like to play some games like Valorant, Call Of Duty, Formula 1 and I also really like listening to music and watching series.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services section-padding">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" data-translate="services-title">Technologies</h2>
+                <div class="divider"></div>
+                <p class="section-subtitle" data-translate="services-subtitle">Technologies and tools I use in my applications</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fab fa-laravel"></i>
+                    </div>
+                    <h3 class="service-title">Laravel</h3>
+                    <div class="service-icon">
+                        <i class="fab fa-php"></i>
+                    </div>
+                    <h3 class="service-title">PHP</h3>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fab fa-html5"></i>
+                    </div>
+                    <h3 class="service-title">HTML</h3>
+                    <div class="service-icon">
+                        <i class="fab fa-css3"></i>
+                    </div>
+                    <h3 class="service-title">CSS</h3>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fab fa-docker"></i>
+                    </div>
+                    <h3 class="service-title">Docker</h3>
+                    <div class="service-icon">
+                        <i class="fab fa-ubuntu"></i>
+                    </div>
+                    <h3 class="service-title">Ubuntu</h3>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <h3 class="service-title">MySQL</h3>
+                    <div class="service-icon">
+                        <i class="fab fa-node"></i>
+                    </div>
+                    <h3 class="service-title">Node.js</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="experience section-padding">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" data-translate="experience-title">Work Experience</h2>
+                <div class="divider"></div>
+                <p class="section-subtitle" data-translate="experience-subtitle">My professional journey and career milestones</p>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">2025 - Present</div>
+                    <div class="timeline-content">
+                        <h3 class="timeline-title" data-translate="exp1-title">Support Analyst I</h3>
+                        <div class="timeline-company">Tray E-commerce</div>
+                        <p class="timeline-description" data-translate="exp1-desc">In January 2025, I was hired by the company. As my contract is coming to an end, thanks to my effort and performance, I won the position where I am currently working. I feel honored and happy that they trust my work, and I continue to learn and develop more and more.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">2025 - Present</div>
+                    <div class="timeline-content">
+                        <h3 class="timeline-title" data-translate="exp2-title">DevMenthors Mentor</h3>
+                        <div class="timeline-company">DevMenthors - UNIMAR</div>
+                        <p class="timeline-description" data-translate="exp2-desc">In 2024, DevMenthors was briefly interrupted, but former students wanted to reopen the course again. Instead of being students, we will be mentors. We will teach high school students to increase their knowledge and prepare them for the job market.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">2024 - 2025</div>
+                    <div class="timeline-content">
+                        <h3 class="timeline-title" data-translate="exp3-title">Trainee Support Analyst</h3>
+                        <div class="timeline-company">Tray E-commerce</div>
+                        <p class="timeline-description" data-translate="exp3-desc">During the period from February 2024 to January 2025, I was an Trainee at Tray, working as a support analyst I, where I was able to develop myself and understand more deeply how an e-commerce really worked.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">2022 - 2023</div>
+                    <div class="timeline-content">
+                        <h3 class="timeline-title" data-translate="exp4-title">DevMenthors Student</h3>
+                        <div class="timeline-company">DevMenthors - Univem</div>
+                        <p class="timeline-description" data-translate="exp4-desc">During the year 2022 and 2023 I was a student at DevMenthors, where content such as Docker, Node.js, Flutter, GO Language was taught by college students.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">2021 - 2023</div>
+                    <div class="timeline-content">
+                        <h3 class="timeline-title" data-translate="exp5-title">Informatica para Internet</h3>
+                        <div class="timeline-company">ETEC Antonio Devisate</div>
+                        <p class="timeline-description" data-translate="exp5-desc">High school education integrated with technical education, I graduated in 2023, in this education I was able to learn a little more about mobile development, web development with HTML, CSS and PHP.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio section-padding">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" data-translate="portfolio-title">My Projects</h2>
+                <div class="divider"></div>
+                <p class="section-subtitle" id="warning" data-translate="portfolio-warning">⚠️ In coming...</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact section-padding">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" data-translate="contact-title">Let's Connect</h2>
+                <div class="divider"></div>
+                <p class="section-subtitle" data-translate="contact-subtitle">Have a project in mind? Get in touch and let's create something amazing together.</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3 class="contact-title" data-translate="contact-email">Email</h3>
+                            <p class="contact-text">contato@vitoraraujo.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3 class="contact-title" data-translate="contact-phone">Phone</h3>
+                            <p class="contact-text">+55 (14) 99903-1741</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3 class="contact-title" data-translate="contact-location">Location</h3>
+                            <p class="contact-text">Marília, SP</p>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/vitor-araujo-5a4910227/" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://github.com/VitorAraujo63" class="social-link"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form id="contactForm" action="https://formsubmit.co/contato@vitoraraujo.com" method="POST">
+                        <input type="hidden" name="_captcha" value="false">
+                        <input type="hidden" name="_subject" value="Nova mensagem do site">
+                        <input type="hidden" name="_template" value="box">
+                        <input type="hidden" name="_next" value="https://vitoraraujo.com/thx.html">
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name" data-translate="form-name">Name</label>
+                                <input type="text" id="name" name="name" data-translate-placeholder="form-name-placeholder" placeholder="Your name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email" data-translate="form-email">Email</label>
+                                <input type="email" id="email" name="email" data-translate-placeholder="form-email-placeholder" placeholder="Your email" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject" data-translate="form-subject">Subject</label>
+                            <input type="text" id="subject" name="subject" data-translate-placeholder="form-subject-placeholder" placeholder="Subject" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message" data-translate="form-message">Message</label>
+                            <textarea id="message" name="message" data-translate-placeholder="form-message-placeholder" placeholder="Your message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block">
+                            <i class="fas fa-paper-plane"></i> <span data-translate="form-send">Send Message</span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p class="copyright">© <span id="year"></span> Vitor Henrique P. Araujo. <span data-translate="footer-rights">All rights reserved.</span></p>
+        </div>
+    </footer>
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-81QRYBKFRZ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-81QRYBKFRZ');
+  </script>
+
+    <script src="script.js"></script>
+</body>
+</html>
