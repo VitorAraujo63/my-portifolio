@@ -11,7 +11,7 @@ jobs:
 
     steps:
       - name: Checkout do repositório
-        uses: actions/checkout@v4
+        uses: actions/checkout@v3
 
       - name: Deploy para Locaweb via SFTP
         uses: locaweb/ftp-deploy@1.0.0
@@ -19,7 +19,5 @@ jobs:
           host: ${{ secrets.HOST }}
           user: ${{ secrets.USER }}
           password: ${{ secrets.PASS }}
-          port: 22
-          localDir: ./
-          remoteDir: public_html
-          delete_remote_files: false
+          localDir: "./dist"
+          remoteDir: "public_html"
