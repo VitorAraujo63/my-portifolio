@@ -1,4 +1,4 @@
-name: Deploy via SFTP
+name: Deploy via FTP
 
 on:
   push:
@@ -6,18 +6,18 @@ on:
       - main
 
 jobs:
-  sftp-deploy:
+  ftp-deploy:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout do repositório
-        uses: actions/checkout@v3
+      - name: Checkout
+        uses: actions/checkout@v4
 
-      - name: Deploy para Locaweb via SFTP
+      - name: Deploy para Locaweb
         uses: locaweb/ftp-deploy@1.0.0
         with:
           host: ${{ secrets.HOST }}
           user: ${{ secrets.USER }}
           password: ${{ secrets.PASS }}
           localDir: .
-          remoteDir: "public_html"
+          remoteDir: public_html
+          forceSsl: true
