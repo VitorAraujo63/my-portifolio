@@ -1,16 +1,25 @@
-name: Deploy via ftp
-on: push
-jobs:
-  deploy:
-    name: Deploy
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v3
+name: Deploy via SFTP
 
-    - name: FTP Deploy Locaweb
-      uses: locaweb/ftp-deploy@1.0.0
-      with:
-        host: ${{ secrets.HOST }} 
-        user: ${{ secrets.USER }}
-        password: ${{ secrets.PASS }}
-        localDir: "/"
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  sftp-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout do repositório
+        uses: actions/checkout@v4
+
+      - name: Deploy para Locaweb via SFTP
+        uses: locaweb/ftp-deploy@1.0.0
+        with:
+          host: ${{ secrets.HOST }}
+          user: ${{ secrets.USER }}
+          password: ${{ secrets.PASS }}
+          port: 22
+          localDir: ./
+          remoteDir: public_html
+          delete_remote_files: false
