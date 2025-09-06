@@ -95,7 +95,7 @@
             <div class="about-content">
                 <div class="about-image">
                     <div class="image-container">
-                        <img src="img/picture.jpg" alt="Profile Photo">
+                        <img src="img/picture.jpg" alt="garoto de braço cruzado, camiseta preta e sorrindo">
                     </div>
                 </div>
                 <div class="about-text">
@@ -221,9 +221,109 @@
     <section id="portfolio" class="portfolio section-padding">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title" data-translate="portfolio-title">My Projects</h2>
+                <h2 class="section-title" data-translate="portfolio-title">Meus Projetos</h2>
                 <div class="divider"></div>
-                <p class="section-subtitle" id="warning" data-translate="portfolio-warning">⚠️ In coming...</p>
+                <p class="section-subtitle" data-translate="portfolio-subtitle">Aqui estão alguns dos projetos em que trabalhei recentemente.</p>
+            </div>
+
+            <div class="portfolio-card">
+                    <div class="portfolio-content">
+                        <div class="status-indicator" data-translate-tooltip="status-dev"></div>
+
+                        <br>
+
+                        <h3 class="portfolio-title" data-translate="project0-title"></span></h3><img src="devmenthors.svg" alt="logo do devmenthors">
+                        <p class="portfolio-description" data-translate="project0-desc"></p>
+                        <div class="portfolio-tags">
+                            <span class="tag">PHP</span>
+                            <span class="tag">Laravel</span>
+                            <span class="tag">HTML5</span>
+                            <span class="tag">CSS3</span>
+                            <span class="tag">Docker</span>
+                            <span class="tag">MySQL</span>
+                            <span class="tag">CI/CD</span>
+                            <span class="tag">MVC</span>
+                        </div>
+                        <div class="portfolio-links">
+                            <a href="https://github.com/VitorAraujo63/dev-menthors" target="_blank" class="btn btn-outline">
+                                <i class="fa-brands fa-github"></i>
+                                <span data-translate="btn-code">Código</span>
+                            </a>
+                            
+                            <a href="https://devmenthors.com.br" target="_blank" class="btn btn-primary">
+                                <i class="fas fa-external-link-alt"></i>
+                                <span data-translate="btn-demo">Ver site</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            
+            <div class="portfolio-grid">
+                <div class="portfolio-card">
+                    <div class="portfolio-content">
+                        <h3 class="portfolio-title" data-translate="project1-title">Gerenciamento de usuario</h3>
+                        <p class="portfolio-description" data-translate="project1-desc">
+                            Esta API foi desenvolvida para o projeto acadêmico <strong>TalkLog</strong>, utilizando Node.js em conjunto com o Supabase para o gerenciamento de usuários. A solução permite que cada usuário tenha um perfil, com a possibilidade de alterar suas informações pessoais e foto de perfil. Todo o processo de autenticação é realizado via <strong>JWT</strong> (JSON Web Token), garantindo a validação da sessão do usuário logado. Adicionalmente, foi implementado um sistema de login social com o Google, integrado diretamente ao Supabase para uma experiência de acesso simplificada.
+                        </p>
+                        <div class="portfolio-tags">
+                            <span class="tag">Node.js</span>
+                            <span class="tag">Supabase</span>
+                            <span class="tag">Postgress</span>
+                            <span class="tag">Auth JWT</span>
+                            <span class="tag">API Rest</span>
+                        </div>
+                        <div class="portfolio-links">
+                            <a href="https://github.com/VitorAraujo63/api_authetication_jwt" target="_blank" class="btn btn-outline">
+                                <i class="fa-brands fa-github"></i>
+                                <span data-translate="btn-code">Código</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-card">
+                    <div class="portfolio-content">
+                        <h3 class="portfolio-title" data-translate="project2-title">Gravador e transcrição</h3>
+                        <p class="portfolio-description" data-translate="project2-desc">
+                            Desenvolvido em Python para o projeto acadêmico <strong>TalkLog</strong>, este sistema grava o audio das reuniões e transcreve o áudio em arquivos de texto (.txt) utilizando a biblioteca <strong>Whisper</strong> da OpenAI. As transcrições são enviadas ao Supabase, onde um serviço automatizado na <strong>AWS</strong> as processa para gerar resumos automáticos. Esta solução evoluiu de um armazenamento local com MinIO para a nuvem, garantindo maior integração e acessibilidade ao projeto.
+                        </p>
+                        <div class="portfolio-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">Whisper(openAI)</span>
+                            <span class="tag">MinIO</span>
+                        </div>
+                        <div class="portfolio-links">
+                            <a href="https://github.com/VitorAraujo63/project_minio_whisper/" target="_blank" class="btn btn-outline">
+                                <i class="fa-brands fa-github"></i>
+                                <span data-translate="btn-code">Código</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-card">
+                    <div class="portfolio-content">
+                        <h3 class="portfolio-title" data-translate="project3-title">Sistema ERP em Laravel</h3>
+                        <p class="portfolio-description" data-translate="project3-desc">
+                            API robusta para ERP desenvolvida em Laravel, permitindo a gestão de clientes, vendas, categorias e produtos, com dashboard e exportação de dados em CSV. Seu grande diferencial é a criação de produtos via <strong>código de barras (EAN)</strong>: o sistema consulta a API da Bluesoft Cosmos para cadastrar nome e imagem automaticamente, simplificando e agilizando o processo para qualquer usuário. Toda a API foi documentada com <strong>Swagger (OpenAPI)</strong> para facilitar a integração com aplicações front-end.
+                        </p>
+                        <div class="portfolio-tags">
+                            <span class="tag">PHP</span>
+                            <span class="tag">Laravel</span>
+                            <span class="tag">API Rest</span>
+                            <span class="tag">MySQL</span>
+                            <span class="tag">Docker</span>
+                            <span class="tag">Swagger</span>
+                        </div>
+                        <div class="portfolio-links">
+                            <a href="https://github.com/VitorAraujo63/ean-api" target="_blank" class="btn btn-outline">
+                                <i class="fa-brands fa-github"></i>
+                                <span data-translate="btn-code">Código</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>

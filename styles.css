@@ -175,6 +175,38 @@ img {
 
 [data-theme="dark"] .navbar {
   background-color: rgba(17, 24, 39, 0.95);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+[data-theme="dark"] .nav-link:hover {
+    color: #ffffff; /* Garante que o texto fique branco e nítido */
+    background-color: var(--primary-color); /* Usa a cor primária para um destaque vibrante */
+    transform: translateY(-2px); /* Efeito de leve elevação */
+    box-shadow: 0 0 15px 0 rgba(239, 83, 80, 0.5); /* Adiciona um brilho suave */
+}
+
+[data-theme="dark"] .nav-menu {
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+[data-theme="dark"] .portfolio-card {
+  background-color: var(--card-bg-color);
+  /* Borda sutil que dá um acabamento limpo e futurista */
+  border: 1px solid rgba(255, 255, 255, 0.1); 
+  /* Sombra mais escura para criar profundidade */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); 
+}
+
+[data-theme="dark"] .portfolio-card:hover {
+  border-color: rgba(239, 83, 80, 0.5); /* A borda também acende */
+  /* A sombra se transforma em um brilho suave e avermelhado */
+  box-shadow: 0 10px 30px -5px rgba(239, 83, 80, 0.2);
+}
+
+[data-theme="dark"] .tag {
+    background-color: var(--primary-color-light);
+    color: var(--primary-color);
 }
 
 .navbar .container {
@@ -232,6 +264,10 @@ img {
 
 [data-theme="dark"] .theme-toggle::before {
   left: calc(100% - 22px);
+  --card-bg-color: var(--bg-light); /* Fundo do card um pouco mais claro que o fundo do site */
+  --secondary-text-color: var(--text-light);
+  --primary-color-light: rgba(239, 83, 80, 0.1); /* Um vermelho bem sutil para o fundo das tags */
+
 }
 
 /* Language Selector */
@@ -1048,4 +1084,156 @@ textarea {
     width: 100%;
     max-width: 250px;
   }
+}
+
+/* --- Portfolio Section Styles (Simplified Version) --- */
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.portfolio-card {
+    background-color: var(--card-bg-color);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.portfolio-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.portfolio-content {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1; 
+}
+
+.portfolio-title {
+    font-size: 1.5rem;
+    color: var(--text-color);
+    margin-top: 0;
+    margin-bottom: 0.75rem;
+}
+
+.portfolio-content img {
+  width: 50px;
+}
+
+.portfolio-description {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--secondary-text-color);
+    margin-bottom: 1.5rem;
+    flex-grow: 1;
+}
+
+.portfolio-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.tag {
+    background-color: var(--primary-color-light);
+    color: var(--primary-color);
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.portfolio-links {
+    display: flex; /* Mantido para centralizar o botão filho */
+    margin-top: auto;
+    gap: 1rem;
+}
+
+.portfolio-links .btn {
+    padding: 0.6rem 1rem;
+    font-size: 0.9rem;
+    width: 100%; /* Faz o único botão ocupar todo o espaço */
+    text-align: center;
+}
+
+.portfolio-links .btn i {
+    margin-right: 0.5rem;
+}
+
+/* Ajuste para telas menores */
+@media (max-width: 400px) {
+    .portfolio-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.devmenthors {
+  color: #0502b8;
+  font-size: 23px;
+  font-weight: 900;
+  font-style: italic;
+}
+
+/* --- Garanta que seu card seja um ponto de referência --- */
+.portfolio-card {
+    position: relative; /* Essencial para o posicionamento do indicador */
+}
+
+/* --- Estilo do Indicador de Status (Canto do Card) --- */
+.status-indicator {
+    position: absolute; /* Posiciona sobre o card */
+    top: 16px; /* Distância do topo */
+    left: 16px; /* Distância da esquerda */
+    width: 18px;  /* Largura do círculo */
+    height: 18px; /* Altura do círculo */
+    background-color: #ffc107; /* Cor de "em desenvolvimento" */
+    border-radius: 50%; /* Transforma o quadrado em um círculo perfeito */
+    border: 2px solid var(--card-bg-color); /* Borda da cor do fundo do card para um efeito de recorte */
+    z-index: 10; /* Garante que o indicador fique por cima de tudo */
+    animation: pulse-border 2s infinite; /* Animação sutil */
+}
+
+/* Tooltip que aparece ao passar o mouse */
+.status-indicator::after {
+    content: attr(data-tooltip); /* Pega o texto do atributo 'data-tooltip' */
+    position: absolute;
+    left: 120%; /* Posição à direita do círculo */
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #333;
+    color: #fff;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    white-space: nowrap; /* Impede que o texto quebre a linha */
+    opacity: 0; /* Começa invisível */
+    visibility: hidden;
+    transition: opacity 0.2s ease-in-out;
+}
+
+/* Mostra o tooltip no hover */
+.status-indicator:hover::after {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Animação de pulso para o indicador */
+@keyframes pulse-border {
+    0% {
+        box-shadow: 0 0 0 0 rgba(255, 193, 7, 0.7);
+    }
+    70% {
+        box-shadow: 0 0 0 8px rgba(255, 193, 7, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(255, 193, 7, 0);
+    }
 }
